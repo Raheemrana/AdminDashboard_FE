@@ -1,0 +1,54 @@
+  .bg-gradient-primary {
+    background: linear-gradient(87deg, #1a4c5a 0, #3f2146 100%) !important;
+  }
+
+  .chart{
+    width: 700px !important;
+    margin: 0 auto;
+  }
+  *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.datepick{
+    background-color: #fff;
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #525f7f;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.datepickers{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 20px;
+
+}
+select {
+  width: auto;
+  background-color: #fff;
+  padding: 15px;
+  top: 50%;
+  left: 50%;
+  font-family: "Roboto Mono",monospace;
+  color: #525f7f;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
