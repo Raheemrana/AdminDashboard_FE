@@ -3,7 +3,7 @@
   }
 
   .chart{
-    width: 700px !important;
+    width: 950px !important;
     margin: 0 auto;
   }
   *,
@@ -40,7 +40,7 @@
 
 }
 select {
-  width: auto;
+  width: 200px;
   background-color: #fff;
   padding: 15px;
   top: 50%;
@@ -51,4 +51,28 @@ select {
   border: none;
   outline: none;
   border-radius: 5px;
+}
+
+.rounded-button {
+  border-radius: 50%; /* Make the button round */
+  width: 50px; /* Set the button width */
+  height: 50px; /* Set the button height */
+  background-color: #ffd600;
+  color: #ffffff;
+  border: none; /* Remove button border */
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Styles for the reload icon */
+.rounded-button i {
+
+  transform: rotate(0deg); /* Initial rotation angle for the icon */
+  transition: transform 0.5s ease; /* Add transition effect */
+}
+
+/* Hover effect for the reload icon */
+.rounded-button:hover i {
+  transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
