@@ -17,7 +17,7 @@ export const getfilteredSales = (startDate, endDate, productId, categoryId, char
             endDate: endDate,
             product_id: productId,
             category_id: categoryId,
-            span: 'month'
+            span: chartType
         }
     })
     .then((res) =>{

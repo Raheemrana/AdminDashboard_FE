@@ -1,7 +1,6 @@
   .bg-gradient-primary {
-    background: linear-gradient(87deg, #1a4c5a 0, #3f2146 100%) !important;
+    background-color: #fff5ee;
   }
-
   .chart{
     width: 950px !important;
     margin: 0 auto;
@@ -75,4 +74,25 @@ select {
 /* Hover effect for the reload icon */
 .rounded-button:hover i {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+}
+
+.grid-table{
+  flex: 1; /* Allow the container to take up remaining vertical space */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }

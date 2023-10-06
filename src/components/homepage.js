@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import BarChart from "../charts/bar";
 import LineChart from "../charts/Line";
-import { getSalesByGender, getfilteredSales } from "../apis/sales";
+import { getfilteredSales } from "../apis/sales";
 import { getproductsDropdown } from "../apis/products";
 import { getCategoriesDropdown } from "../apis/category";
 import Cards from "./Cards";
 import "./Homepage.css";
+import Navbar from "./Navbar";
 
 const backgroundColor = [
   "rgba(255, 99, 132, 0.8)",
@@ -15,11 +15,22 @@ const backgroundColor = [
   "rgba(153, 102, 255, 0.8)",
   "rgba(255, 159, 64, 0.8)",
 ];
+const chartTypes = [
+  {value: 'Day', key: 'day'},
+  {value: 'Month', key: 'month'},
+  {value: 'Year', key: 'year'}
+]
 function Homepage() {
+
   //#region useStates
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
+  });
+  const [tilesData, setTilesData] = useState({
+    Revenue: 0,
+    Units: 0,
+    Sales: 0,
   });
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -28,6 +39,7 @@ function Homepage() {
   const [productsDropdown, setProductsDropdown] = useState([]);
   const [categoriesDropdown, setcategoriesDropdown] = useState([]);
   const [reloadData, setReloadData] = useState(false);
+  const [chartType, setChartType] = useState('day')
 
   //#endregion
   
@@ -59,7 +71,7 @@ function Homepage() {
       endDate,
       productChoice,
       categoryChoice,
-      null,
+      chartType,
       (res) => {
         setChartData({
           labels: res.data.labels,
@@ -68,11 +80,16 @@ function Homepage() {
               label: "",
               data: res.data.dataset,
               backgroundColor: backgroundColor,
-              borderColor: 'rgba(255, 99, 132, 1)', 
+              borderColor: 'rgba(255, 99, 132, 0.7)', 
               borderWidth: 2,
               fill: false, 
             },
           ],
+        })
+        setTilesData({
+          Revenue: res.data.totalRevenue.toLocaleString(),
+          Units: res.data.totalUnits.toLocaleString(),
+          Sales: res.data.totalSalesCount.toLocaleString(),
         })
       },
       (err) => {
@@ -86,11 +103,14 @@ function Homepage() {
     setReloadData(!reloadData)
   }
 
-  
   return (
+    <>
+    <div>
+      <Navbar/>
+    </div>
     <div className="bg-gradient-primary">
       <div>
-        <Cards />
+        <Cards data={tilesData} />
       </div>
       <div className="datepickers">
         <input
@@ -111,7 +131,7 @@ function Homepage() {
         &emsp;
         <select
           name="products"
-          id="cars"
+          id="products"
           onChange={(value) => setProductChoice(value.target.value)}
         >
           {productsDropdown.map((x) => {
@@ -120,11 +140,21 @@ function Homepage() {
         </select>
         &emsp;
         <select
-          name="products"
-          id="cars"
+          name="categories"
+          id="categories"
           onChange={(value) => setCategoryChoice(value.target.value)}
         >
           {categoriesDropdown.map((x) => {
+            return <option value={x.key}> {x.value} </option>;
+          })}
+        </select>
+        &emsp;
+        <select
+          name="charttypes"
+          id="charttypes"
+          onChange={(value) => setChartType(value.target.value)}
+        >
+          {chartTypes.map((x) => {
             return <option value={x.key}> {x.value} </option>;
           })}
         </select>
@@ -136,10 +166,8 @@ function Homepage() {
       <div className="chart">
         <LineChart data={chartData} />
       </div>
-      <div className="chart">
-        <LineChart data={chartData} />
-      </div>
     </div>
+    </>
   );
 }
 

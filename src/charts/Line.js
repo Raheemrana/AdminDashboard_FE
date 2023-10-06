@@ -7,10 +7,10 @@ const options = {
     y: {
       beginAtZero: true,
       grid: {
-        color: 'rgba(255, 255, 255, 1)', // Change the color of the horizontal gridlines
+        color: 'rgba(255, 214, 0, 1)', // Change the color of the horizontal gridlines
       },
       ticks: {
-        color: 'rgba(255, 206, 86, 0.8)', // Color of Y-axis tick labels
+        color: 'rgba(255, 206, 86, 1)', // Color of Y-axis tick labels
       },
     },
     x: {
@@ -18,7 +18,7 @@ const options = {
         color: 'rgba(255, 99, 132, 0)', // Change the color of the vertical gridlines
       },
       ticks: {
-        color: 'rgba(255, 206, 86, 0.8)', // Color of X-axis tick labels
+        color: 'rgba(255, 206, 86, 1)', // Color of X-axis tick labels
       },
     },
   },
