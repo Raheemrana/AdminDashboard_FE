@@ -82,7 +82,7 @@ function Homepage() {
               backgroundColor: backgroundColor,
               borderColor: 'rgba(255, 99, 132, 0.7)', 
               borderWidth: 2,
-              fill: false, 
+              fill: true, 
             },
           ],
         })
@@ -112,7 +112,7 @@ function Homepage() {
       <div>
         <Cards data={tilesData} />
       </div>
-      <div className="datepickers">
+      <div className="filters-bar">
         <input
           className="datepick"
           type="date"

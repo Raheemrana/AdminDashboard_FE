@@ -6,11 +6,19 @@ const Navbar = () => {
     <div>
       <div className="navbar">
         <div className="nav-links-left">
-          <a href="#dashboard">Dashboard</a>
+          <a href="dashboard">Dashboard</a>
         </div>
-        <div className="logo">Admin Panel</div>
+        <div className="logo">
+        <div className="nav-links-left">
+          <a href="/">Admin Panel</a>
+        </div>
+        </div>
         <div className="nav-links-right">
           <a href="products">Products</a>
+        </div>
+        &emsp;
+        <div className="nav-links-right">
+          <a href="customers">Customers</a>
         </div>
       </div>
       {/* Rest of your content goes here */}

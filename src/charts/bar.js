@@ -1,35 +1,36 @@
+// ChartCard.jsx
+
 import React from 'react';
-import { Bar } from "react-chartjs-2"
-import { Chart as ChartJS } from "chart.js/auto";
+import { Bar } from 'react-chartjs-2';
 
-const options = {
-  scales: {
-    y: {
-      beginAtZero: true,
-      grid: {
-        color: 'rgba(255, 255, 255, 1)', // Change the color of the horizontal gridlines
+const BarChart = ({ title, data }) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        label: title,
+        data: data.values,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Bar color
+        borderColor: 'rgba(75, 192, 192, 1)', // Border color
+        borderWidth: 1,
       },
-      ticks: {
-        color: 'rgba(255, 255, 255, 0.8)', // Color of Y-axis tick labels
+    ],
+  };
+
+  const chartOptions = {
+    scales: {
+      y: {
+        beginAtZero: true,
       },
     },
-    x: {
-      grid: {
-        color: 'rgba(255, 99, 132, 0)', // Change the color of the vertical gridlines
-      },
-      ticks: {
-        color: 'rgba(255, 206, 86, 0.8)', // Color of Y-axis tick labels
-      },
-    },
-  },
-};
+  };
 
-function BarChart({data}) {
   return (
-    <div >
-        <Bar data = {data} options={options}/>
+    <div className="chart-card">
+      <h2>{title}</h2>
+      <Bar data={data} options={chartOptions} />
     </div>
   );
-}
+};
 
 export default BarChart;

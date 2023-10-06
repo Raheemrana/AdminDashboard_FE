@@ -1,0 +1,26 @@
+.Dashboard{
+    background-color: #fff5ee;
+}
+  .centered{
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .row{
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .section-header {
+    background-color: #333333d1;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .section-title {
+    color: #fff;
+    font-size: 28px;
+    margin: auto;
+  }

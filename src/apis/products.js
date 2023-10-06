@@ -10,3 +10,12 @@ export const getproductsDropdown = (response, error) =>
     .catch((err) =>{
         error(err)
     })
+
+export const getProducts = (response, error) =>
+    axios.get('http://localhost:8000/products')
+    .then((res) =>{
+        response(res.data)
+    })
+    .catch((err) =>{
+        error(err)
+    })

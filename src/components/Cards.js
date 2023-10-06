@@ -15,7 +15,7 @@ const Cards = ({data}) => {
                     <div class="card-body">
                         <div class="row">
                         <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Traffic</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">REVENUE</h5>
                             <span class="h2 font-weight-bold mb-0">{data.Revenue}</span>
                         </div>
                         <div class="col-auto">
@@ -49,7 +49,7 @@ const Cards = ({data}) => {
                     <div class="card-body">
                         <div class="row">
                         <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                            <h5 class="card-title text-uppercase text-muted mb-0">Sales count</h5>
                             <span class="h2 font-weight-bold mb-0">{data.Sales}</span>
                         </div>
                         <div class="col-auto">
@@ -66,8 +66,8 @@ const Cards = ({data}) => {
                     <div class="card-body">
                         <div class="row">
                         <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                            <h5 class="card-title text-uppercase text-muted mb-0">Stock</h5>
+                            <span class="h2 font-weight-bold mb-0">38,65%</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-info text-white rounded-circle shadow">

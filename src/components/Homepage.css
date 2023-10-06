@@ -1,42 +1,42 @@
-  .bg-gradient-primary {
-    background-color: #fff5ee;
-  }
-  .chart{
-    width: 950px !important;
-    margin: 0 auto;
-  }
-  *,
+.bg-gradient-primary {
+  background-color: #fff5ee;
+}
+.chart {
+  width: 950px !important;
+  margin: 0 auto;
+}
+*,
 *:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.datepick{
-    background-color: #fff;
-    padding: 15px;
-    top: 50%;
-    left: 50%;
-    font-family: "Roboto Mono",monospace;
-    color: #525f7f;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+.datepick {
+  background-color: #fff;
+  padding: 15px;
+  top: 50%;
+  left: 50%;
+  font-family: "Roboto Mono", monospace;
+  color: #525f7f;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 11px 12px 10px rgb(141 127 0 / 20%);
 }
-::-webkit-calendar-picker-indicator{
-    background-color: #ffffff;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 3px;
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
-.datepickers{
+.filters-bar {
   display: flex;
   justify-content: center;
   color: #fff;
   margin-bottom: 20px;
-
 }
 select {
   width: 200px;
@@ -44,12 +44,13 @@ select {
   padding: 15px;
   top: 50%;
   left: 50%;
-  font-family: "Roboto Mono",monospace;
+  font-family: "Roboto Mono", monospace;
   color: #525f7f;
   font-size: 18px;
   border: none;
   outline: none;
   border-radius: 5px;
+  box-shadow: 11px 12px 10px rgb(141 127 0 / 20%);
 }
 
 .rounded-button {
@@ -66,7 +67,6 @@ select {
 
 /* Styles for the reload icon */
 .rounded-button i {
-
   transform: rotate(0deg); /* Initial rotation angle for the icon */
   transition: transform 0.5s ease; /* Add transition effect */
 }
@@ -76,7 +76,7 @@ select {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
 
-.grid-table{
+.grid-table {
   flex: 1; /* Allow the container to take up remaining vertical space */
   display: flex;
   justify-content: center; /* Center horizontally */

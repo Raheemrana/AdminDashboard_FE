@@ -2,9 +2,25 @@
 import axios from 'axios';
 
 export const getSalesByGender = (response, error) =>
-    axios.get('http://127.0.0.1:8000/inventory')
+    axios.get('http://127.0.0.1:8000/sales-by-gender')
     .then((res) =>{
-        response(res)
+        response(res.data)
+    })
+    .catch((err) =>{
+        error(err)
+    })
+export const getSalesByAge = (response, error) =>
+    axios.get('http://127.0.0.1:8000/sales-by-age-brackets')
+    .then((res) =>{
+        response(res.data)
+    })
+    .catch((err) =>{
+        error(err)
+    })
+export const getSalesByMedium = (response, error) =>
+    axios.get('http://127.0.0.1:8000/sales-by-transaction')
+    .then((res) =>{
+        response(res.data)
     })
     .catch((err) =>{
         error(err)

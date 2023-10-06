@@ -209,6 +209,7 @@
   .card-body {
     padding: 1.5rem;
     flex: 1 1 auto;
+    box-shadow: 11px 12px 10px rgb(141 127 0 / 20%);
   }
   
   .card-title {
