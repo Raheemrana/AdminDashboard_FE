@@ -54,33 +54,32 @@ select {
 }
 
 .rounded-button {
-  border-radius: 50%; /* Make the button round */
-  width: 50px; /* Set the button width */
-  height: 50px; /* Set the button height */
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
   background-color: #ffd600;
   color: #ffffff;
-  border: none; /* Remove button border */
-  display: flex; /* Use flexbox for centering content */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  border: none; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
-/* Styles for the reload icon */
 .rounded-button i {
-  transform: rotate(0deg); /* Initial rotation angle for the icon */
-  transition: transform 0.5s ease; /* Add transition effect */
+  transform: rotate(0deg); 
+  transition: transform 0.5s ease;
+  text-decoration: none;
 }
 
-/* Hover effect for the reload icon */
-.rounded-button:hover i {
-  transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+.rounded-button:active i {
+  transform: rotate(360deg);
 }
 
 .grid-table {
-  flex: 1; /* Allow the container to take up remaining vertical space */
+  flex: 1; 
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center; 
+  align-items: center;
 }
 
 .navbar {
