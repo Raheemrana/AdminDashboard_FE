@@ -20,6 +20,10 @@ const Navbar = () => {
         <div className="nav-links-right">
           <a href="customers">Customers</a>
         </div>
+        &emsp;
+        <div className="nav-links-right">
+          <a href="inventorydetails">Inventory Details</a>
+        </div>
       </div>
       {/* Rest of your content goes here */}
     </div>
