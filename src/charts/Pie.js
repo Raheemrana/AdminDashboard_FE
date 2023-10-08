@@ -5,7 +5,7 @@ const PieChart = ({ title, data }) => {
 
 
 const chartOptions = {
-cutout: '50%'
+cutout: '0'
 };
 
   return (

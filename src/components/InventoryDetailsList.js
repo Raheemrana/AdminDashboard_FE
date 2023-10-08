@@ -28,7 +28,7 @@ const InventoryDetailsList = () => {
     </div>
     <div className="grid-container">
       <div className="grid-header">
-        <h1 className="grid-title">Products</h1>
+        <h1 className="grid-title">Inventory Details</h1>
       </div>
       <div className="ag-theme-alpine" style={{width: '100%', height: '400px'}}>
         <AgGridReact

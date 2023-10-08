@@ -5,7 +5,7 @@ const DoughnutChart = ({ title, data }) => {
 
 
   const chartOptions = {
-    cutout: '0'
+    cutout: '50%'
     };
 
   return (
