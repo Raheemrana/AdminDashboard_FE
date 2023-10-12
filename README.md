@@ -18,7 +18,7 @@ After installing dependencies, you can start the development server by running: 
 **Admin Panel Dashboard**
 ![image](https://github.com/Raheemrana/AdminDashboard_FE/assets/59764290/b11adb55-e5d0-4b5f-a67c-4ba92d43c465)
 
-+ With ilters applied
++ With filters applied
 ![image](https://github.com/Raheemrana/AdminDashboard_FE/assets/59764290/31556eda-77ae-4f1c-b0c5-29561371cea6)
 
 **Products List View**
